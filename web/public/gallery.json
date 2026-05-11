@@ -1,0 +1,177 @@
+[
+  {
+    "file": "/gallery/elliptical_117736.jpg",
+    "trueLabel": "elliptical",
+    "trueLabelDisplay": "Elliptical",
+    "gz2Class": "Ei",
+    "assetId": 117736
+  },
+  {
+    "file": "/gallery/elliptical_54214.jpg",
+    "trueLabel": "elliptical",
+    "trueLabelDisplay": "Elliptical",
+    "gz2Class": "Er",
+    "assetId": 54214
+  },
+  {
+    "file": "/gallery/elliptical_4528.jpg",
+    "trueLabel": "elliptical",
+    "trueLabelDisplay": "Elliptical",
+    "gz2Class": "Ei",
+    "assetId": 4528
+  },
+  {
+    "file": "/gallery/elliptical_231402.jpg",
+    "trueLabel": "elliptical",
+    "trueLabelDisplay": "Elliptical",
+    "gz2Class": "Er",
+    "assetId": 231402
+  },
+  {
+    "file": "/gallery/elliptical_45042.jpg",
+    "trueLabel": "elliptical",
+    "trueLabelDisplay": "Elliptical",
+    "gz2Class": "Ei",
+    "assetId": 45042
+  },
+  {
+    "file": "/gallery/spiral_220584.jpg",
+    "trueLabel": "spiral",
+    "trueLabelDisplay": "Spiral",
+    "gz2Class": "Sc3t",
+    "assetId": 220584
+  },
+  {
+    "file": "/gallery/spiral_20948.jpg",
+    "trueLabel": "spiral",
+    "trueLabelDisplay": "Spiral",
+    "gz2Class": "Sb?t",
+    "assetId": 20948
+  },
+  {
+    "file": "/gallery/spiral_129543.jpg",
+    "trueLabel": "spiral",
+    "trueLabelDisplay": "Spiral",
+    "gz2Class": "Sc?t",
+    "assetId": 129543
+  },
+  {
+    "file": "/gallery/spiral_75351.jpg",
+    "trueLabel": "spiral",
+    "trueLabelDisplay": "Spiral",
+    "gz2Class": "Sc2m",
+    "assetId": 75351
+  },
+  {
+    "file": "/gallery/spiral_149321.jpg",
+    "trueLabel": "spiral",
+    "trueLabelDisplay": "Spiral",
+    "gz2Class": "Sc?t",
+    "assetId": 149321
+  },
+  {
+    "file": "/gallery/barred_spiral_62391.jpg",
+    "trueLabel": "barred_spiral",
+    "trueLabelDisplay": "Barred Spiral",
+    "gz2Class": "SBb2m",
+    "assetId": 62391
+  },
+  {
+    "file": "/gallery/barred_spiral_176661.jpg",
+    "trueLabel": "barred_spiral",
+    "trueLabelDisplay": "Barred Spiral",
+    "gz2Class": "SBb2l",
+    "assetId": 176661
+  },
+  {
+    "file": "/gallery/barred_spiral_116084.jpg",
+    "trueLabel": "barred_spiral",
+    "trueLabelDisplay": "Barred Spiral",
+    "gz2Class": "SBc2l",
+    "assetId": 116084
+  },
+  {
+    "file": "/gallery/barred_spiral_183618.jpg",
+    "trueLabel": "barred_spiral",
+    "trueLabelDisplay": "Barred Spiral",
+    "gz2Class": "SBb?m(r)",
+    "assetId": 183618
+  },
+  {
+    "file": "/gallery/barred_spiral_151896.jpg",
+    "trueLabel": "barred_spiral",
+    "trueLabelDisplay": "Barred Spiral",
+    "gz2Class": "SBc2l(d)",
+    "assetId": 151896
+  },
+  {
+    "file": "/gallery/edge_on_disk_151152.jpg",
+    "trueLabel": "edge_on_disk",
+    "trueLabelDisplay": "Edge-on Disk",
+    "gz2Class": "Ser",
+    "assetId": 151152
+  },
+  {
+    "file": "/gallery/edge_on_disk_178158.jpg",
+    "trueLabel": "edge_on_disk",
+    "trueLabelDisplay": "Edge-on Disk",
+    "gz2Class": "Ser",
+    "assetId": 178158
+  },
+  {
+    "file": "/gallery/edge_on_disk_187232.jpg",
+    "trueLabel": "edge_on_disk",
+    "trueLabelDisplay": "Edge-on Disk",
+    "gz2Class": "Ser",
+    "assetId": 187232
+  },
+  {
+    "file": "/gallery/edge_on_disk_240567.jpg",
+    "trueLabel": "edge_on_disk",
+    "trueLabelDisplay": "Edge-on Disk",
+    "gz2Class": "Ser",
+    "assetId": 240567
+  },
+  {
+    "file": "/gallery/edge_on_disk_193235.jpg",
+    "trueLabel": "edge_on_disk",
+    "trueLabelDisplay": "Edge-on Disk",
+    "gz2Class": "Ser",
+    "assetId": 193235
+  },
+  {
+    "file": "/gallery/merger_119360.jpg",
+    "trueLabel": "merger",
+    "trueLabelDisplay": "Merger",
+    "gz2Class": "Sb(m)",
+    "assetId": 119360
+  },
+  {
+    "file": "/gallery/merger_150558.jpg",
+    "trueLabel": "merger",
+    "trueLabelDisplay": "Merger",
+    "gz2Class": "Ec",
+    "assetId": 150558
+  },
+  {
+    "file": "/gallery/merger_114337.jpg",
+    "trueLabel": "merger",
+    "trueLabelDisplay": "Merger",
+    "gz2Class": "Sb1l(m)",
+    "assetId": 114337
+  },
+  {
+    "file": "/gallery/merger_185217.jpg",
+    "trueLabel": "merger",
+    "trueLabelDisplay": "Merger",
+    "gz2Class": "SBb(m)",
+    "assetId": 185217
+  },
+  {
+    "file": "/gallery/merger_122047.jpg",
+    "trueLabel": "merger",
+    "trueLabelDisplay": "Merger",
+    "gz2Class": "Sc?t(m)",
+    "assetId": 122047
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "classes": [
+    "elliptical",
+    "spiral",
+    "barred_spiral",
+    "edge_on_disk",
+    "merger"
+  ],
+  "img_size": 224,
+  "imagenet_normalize": true,
+  "best_val_acc": 0.7888888888888889
+}

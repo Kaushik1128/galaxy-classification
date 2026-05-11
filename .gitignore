@@ -1,0 +1,33 @@
+# Datasets — too large for git
+data/raw/
+data/images/
+data/processed/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# ML artifacts — keep trained model committed so the demo runs out of the box.
+# Ignore intermediate run dirs only.
+ml/runs/
+ml/wandb/
+
+# Local Claude Code config (preview server launch config, etc.)
+.claude/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+dist/
+.env
+.env.local
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
