@@ -1,19 +1,43 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { fetchGallery } from "@/lib/api";
 import type { GalleryItem } from "@/lib/types";
 import GalaxyCard from "./GalaxyCard";
+import GalleryFilter, { type FilterKey } from "./GalleryFilter";
 
 export default function Gallery() {
   const [items, setItems] = useState<GalleryItem[] | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [filter, setFilter] = useState<FilterKey>("all");
 
   useEffect(() => {
     fetchGallery()
       .then(setItems)
       .catch((e) => setError(String(e.message ?? e)));
   }, []);
+
+  const counts = useMemo(() => {
+    const c: Record<FilterKey, number> = {
+      all: 0,
+      elliptical: 0,
+      spiral: 0,
+      barred_spiral: 0,
+      edge_on_disk: 0,
+      merger: 0,
+    };
+    if (items) {
+      c.all = items.length;
+      for (const it of items) c[it.trueLabel]++;
+    }
+    return c;
+  }, [items]);
+
+  const filtered = !items
+    ? []
+    : filter === "all"
+    ? items
+    : items.filter((it) => it.trueLabel === filter);
 
   if (error) {
     return (
@@ -48,10 +72,18 @@ export default function Gallery() {
   }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-      {items.map((item, i) => (
-        <GalaxyCard key={item.assetId} item={item} index={i} />
-      ))}
+    <div className="space-y-6">
+      <GalleryFilter active={filter} counts={counts} onChange={setFilter} />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        {filtered.map((item, i) => (
+          <GalaxyCard key={item.assetId} item={item} index={i} />
+        ))}
+      </div>
+      {filtered.length === 0 && (
+        <div className="glass rounded-2xl p-8 text-center text-white/50 text-sm">
+          No galaxies in this class.
+        </div>
+      )}
     </div>
   );
 }

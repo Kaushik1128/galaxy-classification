@@ -8,12 +8,20 @@ export async function fetchGallery(): Promise<GalleryItem[]> {
   return res.json();
 }
 
-export async function predictGallery(filename: string): Promise<PredictionResponse> {
-  const res = await fetch(`${API_URL}/predict-gallery/${encodeURIComponent(filename)}`, {
-    method: "POST",
-  });
-  if (!res.ok) throw new Error(`Predict failed: ${res.status}`);
-  return res.json();
+const galleryPredictionCache = new Map<string, Promise<PredictionResponse>>();
+
+export function predictGallery(filename: string): Promise<PredictionResponse> {
+  let p = galleryPredictionCache.get(filename);
+  if (!p) {
+    p = fetch(`${API_URL}/predict-gallery/${encodeURIComponent(filename)}`, {
+      method: "POST",
+    }).then((res) => {
+      if (!res.ok) throw new Error(`Predict failed: ${res.status}`);
+      return res.json();
+    });
+    galleryPredictionCache.set(filename, p);
+  }
+  return p;
 }
 
 export async function predictUpload(file: File): Promise<PredictionResponse> {

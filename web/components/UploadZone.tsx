@@ -54,7 +54,7 @@ export default function UploadZone() {
         onDragLeave={() => setDragOver(false)}
         onDrop={onDrop}
         onClick={() => inputRef.current?.click()}
-        className={`glass-strong rounded-2xl p-8 min-h-[360px] flex flex-col items-center justify-center text-center cursor-pointer transition-all
+        className={`glass-strong rounded-2xl p-6 sm:p-8 min-h-[280px] sm:min-h-[360px] flex flex-col items-center justify-center text-center cursor-pointer transition-all
           ${dragOver ? "border-cosmos-glow scale-[1.01]" : ""}
           ${pred && predColorKey ? `glow-${predColorKey}` : ""}`}
       >
@@ -94,7 +94,7 @@ export default function UploadZone() {
         )}
       </div>
 
-      <div className="min-h-[360px] flex flex-col">
+      <div className="min-h-[280px] sm:min-h-[360px] flex flex-col">
         <AnimatePresence mode="wait">
           {error && (
             <motion.div

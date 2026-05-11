@@ -37,11 +37,10 @@ export default function GalaxyCard({ item, index }: Props) {
 
   return (
     <motion.article
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5, delay: index * 0.04 }}
-      className={`glass rounded-2xl overflow-hidden transition-all duration-500 hover:scale-[1.015] ${
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.35, delay: Math.min(index, 10) * 0.035, ease: "easeOut" }}
+      className={`glass rounded-2xl overflow-hidden hover:scale-[1.015] transition-transform duration-300 ${
         pred ? `glow-${predColorKey}` : ""
       }`}
     >
