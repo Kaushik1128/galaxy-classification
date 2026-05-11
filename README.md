@@ -1,10 +1,24 @@
 # Galaxy Classifier
 
+![Landing page with starfield, gradient title, and class legend](docs/galaxy-classification-website1.png)
+
 A portfolio project that classifies galaxy morphology from a single image. A
 fine-tuned EfficientNet-B0 trained on the Galaxy Zoo 2 dataset is served by a
 FastAPI backend; the frontend is a Next.js + Three.js site that classifies a
 curated gallery live on every page load and lets visitors upload their own
 galaxy images.
+
+## Screenshots
+
+**Live gallery — every card is classified by the model on page load. The card border glows in the predicted class's color, and ground-truth labels are shown alongside the model's verdict so you can see when it agrees and when it doesn't.**
+
+![Gallery row of elliptical galaxies with high-confidence predictions](docs/galaxy-classification-website2.png)
+
+![Gallery row of spiral and barred-spiral galaxies with probability bars](docs/galaxy-classification-website3.png)
+
+**Upload your own galaxy image — the model returns probabilities across all five classes with a written description of the predicted morphology.**
+
+![Upload zone with a spiral galaxy classified at 63% confidence, full probability breakdown on the right](docs/galaxy-classification-website4.png)
 
 ## Five classes
 
