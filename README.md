@@ -157,5 +157,33 @@ Open http://localhost:3000.
   stream JPGs directly out of the zip via `zipfile`.
 - The ONNX export uses opset 17 + `dynamo=False` to avoid the new exporter's
   Unicode print statements which crash on Windows cp1252 consoles.
-- CORS in `api/main.py` only allows `localhost:3000` and `127.0.0.1:3000`.
-  Add deployment origins there if you put this online.
+- CORS in `api/main.py` allows `localhost:3000`, `127.0.0.1:3000`, and any
+  `https://*.vercel.app` origin. Extra origins for custom domains can be
+  added at runtime via the `FRONTEND_ORIGINS` env var (comma-separated).
+
+## Data attribution
+
+This project uses the **Galaxy Zoo 2** dataset. If you use it for academic
+work, please cite:
+
+- Willett, K. W., et al. (2013). "Galaxy Zoo 2: detailed morphological
+  classifications for 304,122 galaxies from the Sloan Digital Sky Survey."
+  *Monthly Notices of the Royal Astronomical Society*, 435(4), 2835–2860.
+- Hart, R. E., et al. (2016). "Galaxy Zoo: comparing the demographics of
+  spiral arm number and pitch angle between galaxy zoo and galaxy zoo 2."
+  *Monthly Notices of the Royal Astronomical Society*, 461(4), 3663–3682.
+
+Imagery is from the **Sloan Digital Sky Survey** (SDSS Data Release 7).
+Funding for SDSS and SDSS-II has been provided by the Alfred P. Sloan
+Foundation, the U.S. Department of Energy, NASA, the National Science
+Foundation, and the Japanese Monbukagakusho.
+
+## License
+
+Released under the [MIT License](LICENSE). You're free to use, modify, and
+distribute the code for any purpose — academic, commercial, or personal —
+as long as the copyright notice in `LICENSE` is preserved.
+
+Note that this license covers **the code only**. The Galaxy Zoo 2 catalog,
+SDSS imagery, and citation requirements above are governed by their
+respective sources.
