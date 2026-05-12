@@ -1,0 +1,18 @@
+# Render blueprint — builds the FastAPI inference service from this repo.
+# Wire it up at https://dashboard.render.com/blueprints by pointing at the
+# GitHub repo; Render will pick this file up automatically.
+services:
+  - type: web
+    name: galaxy-classifier-api
+    runtime: python
+    plan: free
+    region: oregon
+    branch: main
+    buildCommand: pip install -r api/requirements.txt
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: FRONTEND_ORIGINS
+        sync: false

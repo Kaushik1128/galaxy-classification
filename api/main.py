@@ -32,9 +32,23 @@ ALLOWED_TYPES = {"image/jpeg", "image/jpg", "image/png", "image/webp"}
 
 app = FastAPI(title="Galaxy Classifier API", version="0.1.0")
 
+# CORS — accept localhost during dev and any *.vercel.app preview/production
+# domain in production. Extra origins from FRONTEND_ORIGINS (comma-separated)
+# can be added at runtime if/when a custom domain is wired up.
+import os as _os
+
+_extra_origins = [
+    o.strip() for o in _os.environ.get("FRONTEND_ORIGINS", "").split(",") if o.strip()
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=[
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        *_extra_origins,
+    ],
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )

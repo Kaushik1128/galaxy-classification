@@ -41,6 +41,10 @@ export async function predictUpload(file: File): Promise<PredictionResponse> {
   return res.json();
 }
 
+/** Gallery JPGs are bundled into the Next.js public/ folder, so the browser
+ * loads them directly from its own origin (faster, cached by Vercel's CDN,
+ * no extra API hits). The API still has a /gallery/image/<file> endpoint
+ * for completeness but the frontend doesn't use it. */
 export function galleryImageUrl(filename: string): string {
-  return `${API_URL}/gallery/image/${encodeURIComponent(filename)}`;
+  return `/gallery/${encodeURIComponent(filename)}`;
 }
