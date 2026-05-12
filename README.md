@@ -1,5 +1,10 @@
 # Galaxy Classifier
 
+**Live demo: [galaxy-classification.vercel.app](https://galaxy-classification.vercel.app)**
+
+*The API runs on Render's free tier — if the page sits cold it may take ~30 s for
+the first prediction to come back while the worker wakes up.*
+
 ![Landing page with starfield, gradient title, and class legend](docs/galaxy-classification-website1.png)
 
 A portfolio project that classifies galaxy morphology from a single image. A
